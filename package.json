@@ -9,6 +9,8 @@
   "author": "Craig Dearden",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.14.0"
+    "bluebird": "^3.4.6",
+    "express": "^4.14.0",
+    "fs": "0.0.1-security"
   }
 }
