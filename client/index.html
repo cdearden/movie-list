@@ -15,9 +15,9 @@
 </head>
 
 <body  ng-controller="movieController" >
-
-  <input ng-model="searchText"
-  <div ng-repeat="movie in movies | searchText" >
+  <h2>Movie List</h2>
+  <input ng-model="searchText" type="search"  placeholder="Search" />
+  <div ng-repeat="movie in movies | filter:searchText" >
     <h3>{{movie.Title}}</h3>
     <p>{{movie.Rated}}</p>
     <p>{{movie.Genre}}</p>
