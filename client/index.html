@@ -1,22 +1,28 @@
 <!doctype html>
 
-<html lang="en">
+<html lang="en" ng-app="App">
 <head>
   <meta charset="utf-8">
 
   <title>Movie List</title>
   <meta name="description" content="Movie List">
   <meta name="author" content="Craig Dearden">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.min.js"></script>
+  <script src="../exampleData.js"></script>
+  <script src="app.js"></script>
 
   <link rel="stylesheet" href="css/styles.css">
-
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
 </head>
 
-<body>
-  <div>Hi</div> 
-  <script src=""></script>
+<body  ng-controller="movieController" >
+
+  <input ng-model="searchText"
+  <div ng-repeat="movie in movies | searchText" >
+    <h3>{{movie.Title}}</h3>
+    <p>{{movie.Rated}}</p>
+    <p>{{movie.Genre}}</p>
+    <p>{{movie.Director}}</p>
+    <p>{{movie.Plot}}</p>
+  </div>
 </body>
 </html>
